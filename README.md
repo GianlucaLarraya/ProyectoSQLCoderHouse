@@ -17,3 +17,56 @@ Descripcion: Almacena la informacion del producto
 | Key | Columna | Tipo de dato | Length | Not null | Unique | Default 
 | :--- | ---: | :---: | :---: | :---: | :---: | :---: 
 PK | id_producto | int | | X | X | AUTO_INCREMENT 
+| | nombre_producto | varchar | 50 | X | X |  | 
+| | talle_producto | varchar | 5 | X |  |  |
+| | genero_producto | varchar | 1 | X |  |  |  
+
+#### Stock ####
+Descripcion: Almacena la cantidad disponible del producto en stock
+| Key | Columna | Tipo de dato | Length | Not null | Unique | Default 
+| :--- | ---: | :---: | :---: | :---: | :---: | :---: 
+PK,FK | id_producto | int | | X | X | 
+| | cantidad | int | | X |  | 
+
+#### Compra ####
+Descripcion: Almacena la informacion de una compra hecha en el Showroom
+| Key | Columna | Tipo de dato | Length | Not null | Unique | Default 
+| :--- | ---: | :---: | :---: | :---: | :---: | :---: 
+PK | id_compra | int | | X | X | AUTO_INCREMENT 
+| | monta_compra | decimal |  | X | X |  | 
+| | fecha_compra | datetime |  | X |  |  |
+FK | id_cliente | int |  | X |  |  | 
+
+#### CompraProducto ####
+Descripcion: Almacena los productos incluidos a una compra
+| Key | Columna | Tipo de dato | Length | Not null | Unique | Default 
+| :--- | ---: | :---: | :---: | :---: | :---: | :---: 
+PK | id_producto_compra | int | | X | X | AUTO_INCREMENT 
+FK | id_producto | int |  | X |  |  | 
+FK | id_compra | int |  | X |  |  |
+
+#### Consulta ####
+Descripcion: Almacena las consultas hechas por usuarios en redes sociales
+| Key | Columna | Tipo de dato | Length | Not null | Unique | Default 
+| :--- | ---: | :---: | :---: | :---: | :---: | :---: 
+PK | id_consulta | int | | X | X | AUTO_INCREMENT 
+FK | id_producto_consulta | int |  | X |  |  | 
+ |  | fecha_consulta | datetime |  | X |  |  |
+
+ #### Turno ####
+Descripcion: Almacena los turnos para visitar el Showroom
+| Key | Columna | Tipo de dato | Length | Not null | Unique | Default 
+| :--- | ---: | :---: | :---: | :---: | :---: | :---: 
+PK | id_turno | int | | X | X | AUTO_INCREMENT 
+FK | dni_cliente | int |  | X |  |  | 
+ |  | fecha_turno | date |  | X |  |  |
+
+  #### Cliente ####
+Descripcion: Almacena los clientes del Showroom
+| Key | Columna | Tipo de dato | Length | Not null | Unique | Default 
+| :--- | ---: | :---: | :---: | :---: | :---: | :---: 
+PK | dni_cliente | int | | X | X | AUTO_INCREMENT 
+ | | nombre_cliente | varchar | 50 | X |  |  | 
+ |  | apellido_cliente | varchar | 50 | X |  |  |
+ |  | edad_cliente | int |  | X |  |  |
+
