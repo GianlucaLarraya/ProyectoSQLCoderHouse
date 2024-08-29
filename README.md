@@ -65,7 +65,7 @@ FK | dni_cliente | int |  | X |  |  |
 Descripcion: Almacena los clientes del Showroom
 | Key | Columna | Tipo de dato | Length | Not null | Unique | Default 
 | :--- | ---: | :---: | :---: | :---: | :---: | :---: 
-PK | dni_cliente | int | | X | X | AUTO_INCREMENT 
+PK | dni_cliente | int | | X | X |  
  | | nombre_cliente | varchar | 50 | X |  |  | 
  |  | apellido_cliente | varchar | 50 | X |  |  |
  |  | edad_cliente | int |  | X |  |  |
