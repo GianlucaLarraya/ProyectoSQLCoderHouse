@@ -8,7 +8,7 @@
 Este proyecto busca mediante una base de datos mejorar la gestion de un showroom de prendas de ropa ¿De qué manera? Llevando un registro del stock de los productos, las ventas, citas (ya que es un showroom con cita previa) y clientes. Además, con el objetivo de recolectar datos verdaderamente útiles para el desarrollo del negocio también se guardaran datos de las consultas hechas por clientes vía redes sociales sobre la disponibilidad de los productos. 
 
 ## Diagrama entidad relación (DER) ##
-![alt text](https://github.com/GianlucaLarraya/ProyectoSQLCoderHouse/blob/main/ShowroomDatabase-3.jpeg?raw=true)
+![alt text](https://github.com/GianlucaLarraya/ProyectoSQLCoderHouse/blob/main/ShowroomDatabase-4.jpeg?raw=true)
 
 ## Tablas ##
 
@@ -20,7 +20,7 @@ PK | id_producto | int | | X | X | AUTO_INCREMENT
 | | nombre_producto | varchar | 50 | X | X |  | 
 | | talle_producto | varchar | 5 | X |  |  |
 | | genero_producto | enum | | X |  |  |'
-| | precio_producto | decimal | | X |  |  |
+| | precio_producto | decimal(10,2) | | X |  |  |
 
 
 #### Stock ####
@@ -35,7 +35,7 @@ Descripcion: Almacena la informacion de una compra hecha en el Showroom
 | Key | Columna | Tipo de dato | Length | Not null | Unique | Default 
 | :--- | ---: | :---: | :---: | :---: | :---: | :---: 
 PK | id_compra | int | | X | X | AUTO_INCREMENT 
-| | monto_compra | decimal |  | X | |  | 
+| | monto_compra | decimal(10,2) |  | X | |  | 
 | | fecha_compra | datetime |  | X |  |  |
 FK | id_cliente | int |  | X |  |  | 
 
@@ -61,7 +61,7 @@ Descripcion: Almacena los turnos para visitar el Showroom
 | :--- | ---: | :---: | :---: | :---: | :---: | :---: 
 PK | id_turno | int | | X | X | AUTO_INCREMENT 
 FK | dni_cliente | int |  | X |  |  | 
- |  | fecha_turno | date |  | X |  |  |
+ |  | fecha_turno | datetime |  | X |  |  |
 
   #### Cliente ####
 Descripcion: Almacena los clientes del Showroom
