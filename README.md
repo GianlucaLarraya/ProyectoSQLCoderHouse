@@ -9,3 +9,11 @@ Este proyecto busca mediante una base de datos mejorar la gestion de un showroom
 
 ## Diagrama entidad relación (DER) ##
 ![alt text](https://github.com/GianlucaLarraya/ProyectoSQLCoderHouse/blob/main/ShowroomDatabase.jpeg?raw=true)
+
+## Tablas ##
+
+#### Producto ####
+Descripcion: Almacena la informacion del producto
+| Key | Columna | Tipo de dato | Length | Not null | Unique | Default 
+| :--- | ---: | :---: | :---: | :---: | :---: | :---: 
+PK | id_producto | int | | X | X | AUTO_INCREMENT 
