@@ -33,7 +33,7 @@ Descripcion: Almacena la informacion de una compra hecha en el Showroom
 | Key | Columna | Tipo de dato | Length | Not null | Unique | Default 
 | :--- | ---: | :---: | :---: | :---: | :---: | :---: 
 PK | id_compra | int | | X | X | AUTO_INCREMENT 
-| | monta_compra | decimal |  | X | X |  | 
+| | monto_compra | decimal |  | X | |  | 
 | | fecha_compra | datetime |  | X |  |  |
 FK | id_cliente | int |  | X |  |  | 
 
