@@ -19,7 +19,7 @@ Descripcion: Almacena la informacion del producto
 PK | id_producto | int | | X | X | AUTO_INCREMENT 
 | | nombre_producto | varchar | 50 | X | X |  | 
 | | talle_producto | varchar | 5 | X |  |  |
-| | genero_producto | varchar | 1 | X |  |  |  
+| | genero_producto | enum | | X |  |  |  
 
 #### Stock ####
 Descripcion: Almacena la cantidad disponible del producto en stock
