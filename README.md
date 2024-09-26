@@ -13,7 +13,7 @@ Este proyecto busca mediante una base de datos mejorar la gestion de un showroom
 ## Tablas ##
 
 #### Producto ####
-Descripcion: Almacena la informacion del producto
+Descripcion: Almacena la informacion básica del producto
 | Key | Columna | Tipo de dato | Length | Not null | Unique | Default 
 | :--- | ---: | :---: | :---: | :---: | :---: | :---: 
 PK | id_producto | int | | X | X | AUTO_INCREMENT 
@@ -22,12 +22,22 @@ PK | id_producto | int | | X | X | AUTO_INCREMENT
 | | genero_producto | enum | | X |  |  |'
 | | precio_producto | decimal(10,2) | | X |  |  |
 
-
-#### Stock ####
-Descripcion: Almacena la cantidad disponible del producto en stock
+#### VarianteProducto ####
+Descripcion: Almacena la informacion de la variante del producto.(Ej:Remera Deportiva en talle M)
 | Key | Columna | Tipo de dato | Length | Not null | Unique | Default 
 | :--- | ---: | :---: | :---: | :---: | :---: | :---: 
-PK,FK | id_producto | int | | X | X | 
+PK | id_variante_producto | int | | X | X | AUTO_INCREMENT 
+FK | id_producto | int | | X | X |  
+| | color_producto | varchar | 20 | X | X |  | 
+| | talle_producto | varchar | 5 | X |  |  |
+| | genero_producto | enum | | X |  |  |'
+
+
+#### Stock ####
+Descripcion: Almacena la cantidad disponible de la variante del producto en stock
+| Key | Columna | Tipo de dato | Length | Not null | Unique | Default 
+| :--- | ---: | :---: | :---: | :---: | :---: | :---: 
+PK,FK | id_variante_producto | int | | X | X | 
 | | cantidad | int | | X |  | 
 
 #### Compra ####
@@ -39,13 +49,14 @@ PK | id_compra | int | | X | X | AUTO_INCREMENT
 | | fecha_compra | datetime |  | X |  |  |
 FK | id_cliente | int |  | X |  |  | 
 
-#### CompraProducto ####
-Descripcion: Almacena los productos incluidos a una compra
+#### ProductoCompra ####
+Descripcion: Almacena las variantes de los productos incluidos a una compra
 | Key | Columna | Tipo de dato | Length | Not null | Unique | Default 
 | :--- | ---: | :---: | :---: | :---: | :---: | :---: 
 PK | id_producto_compra | int | | X | X | AUTO_INCREMENT 
-FK | id_producto | int |  | X |  |  | 
+FK | id_variante_producto | int |  | X |  |  | 
 FK | id_compra | int |  | X |  |  |
+| | cantidad_producto | int | | X |  | 
 
 #### Consulta ####
 Descripcion: Almacena las consultas hechas por usuarios en redes sociales
