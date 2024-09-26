@@ -48,7 +48,7 @@ PK | id_compra | int | | X | X | AUTO_INCREMENT
 FK | id_cliente | int |  | X |  |  | 
 
 #### ProductoCompra ####
-Descripcion: Almacena las variantes de los productos incluidos a una compra
+Descripcion: Almacena las variantes de los productos incluidos en una compra
 | Key | Columna | Tipo de dato | Length | Not null | Unique | Default 
 | :--- | ---: | :---: | :---: | :---: | :---: | :---: 
 PK | id_producto_compra | int | | X | X | AUTO_INCREMENT 
