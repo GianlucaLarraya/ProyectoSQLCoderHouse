@@ -18,8 +18,6 @@ Descripcion: Almacena la informacion básica del producto
 | :--- | ---: | :---: | :---: | :---: | :---: | :---: 
 PK | id_producto | int | | X | X | AUTO_INCREMENT 
 | | nombre_producto | varchar | 50 | X | X |  | 
-| | talle_producto | varchar | 5 | X |  |  |
-| | genero_producto | enum | | X |  |  |'
 | | precio_producto | decimal(10,2) | | X |  |  |
 
 #### VarianteProducto ####
