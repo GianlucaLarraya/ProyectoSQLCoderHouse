@@ -135,5 +135,74 @@ Esta función devuelve el talle más vendido de un producto específico, basado 
 - **VARCHAR(5)**:  
   El talle más vendido del producto especificado.
 
+## Stored Procedures 
+
+### Procedimiento Almacenado: aumentar_stock
+
+**Descripción**:  
+Este procedimiento permite aumentar el stock de una variante específica de un producto. Se utiliza cuando se recibe un nuevo pedido de un proveedor.
+
+#### Parámetros:
+- `nombre_producto` (`VARCHAR(50)`): Nombre del producto al que se le quiere aumentar el stock.
+- `talle_producto` (`VARCHAR(5)`): Talle del producto.
+- `color_producto` (`VARCHAR(20)`): Color de la variante del producto.
+- `cantidad_recibida` (`INT`): Cantidad de stock que se va a sumar.
+
+#### Funcionalidad:
+- Actualiza el stock de la variante del producto sumando la `cantidad_recibida`.
+- Si la variante especificada no existe, lanza un error con el mensaje: **"El producto, talle o color no existe"**.
+
+---
+
+### Procedimiento Almacenado: listar_productos_stock_bajo
+
+**Descripción**:  
+Este procedimiento lista todos los productos y sus variantes cuyo stock está por debajo de un umbral específico. Es útil para identificar qué productos necesitan reabastecimiento.
+
+#### Parámetros:
+- `cantidad_minima` (`INT`): Cantidad mínima de stock para considerar un producto como "bajo en stock".
+
+#### Retorno:
+- Muestra una lista de productos y variantes (`nombre_producto`, `talle_producto`, `color_producto`, `stock_disponible`) que tienen stock menor a `cantidad_minima`.
+
+#### Orden de Resultado:
+- Los productos se ordenan por `stock_disponible` de menor a mayor.
+
+## Triggers
+
+### Trigger: reducir_stock
+
+**Descripción**:  
+Este trigger se activa después de insertar un registro en la tabla `ProductoCompra`. Su propósito es reducir el stock de la variante del producto correspondiente cada vez que se realiza una compra.
+
+#### Evento:
+- **`AFTER INSERT`** en la tabla `ProductoCompra`.
+
+#### Funcionalidad:
+- Reduce el stock de la variante comprada (`cantidad_producto`).
+- Verifica que el stock actualizado no sea negativo.
+- Si el stock se vuelve negativo, se lanza un error con el mensaje: **"Stock insuficiente para completar la compra"**.
+
+#### Columnas Afectadas:
+- **`cantidad`** en la tabla `Stock`: Se actualiza para reflejar la cantidad comprada.
+
+---
+
+### Trigger: prevenir_turno_duplicado
+
+**Descripción**:  
+Este trigger se activa antes de insertar un registro en la tabla `Turno`. Su propósito es prevenir la creación de un turno duplicado en la misma fecha y hora para evitar conflictos de disponibilidad.
+
+#### Evento:
+- **`BEFORE INSERT`** en la tabla `Turno`.
+
+#### Funcionalidad:
+- Comprueba si ya existe un turno en la misma fecha y hora (`fecha_turno`).
+- Si ya existe un turno, se lanza un error con el mensaje: **"Ya existe un turno en esta fecha y hora"**.
+
+#### Columnas Afectadas:
+- **`fecha_turno`** en la tabla `Turno`: Verifica que no se repita para evitar solapamientos.
+
+
  
 
