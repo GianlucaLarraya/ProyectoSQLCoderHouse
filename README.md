@@ -81,3 +81,59 @@ PK | dni_cliente | int | | X | X |
  |  | apellido_cliente | varchar | 50 | X |  |  |
  |  | edad_cliente | int |  | X |  |  |
 
+ ## Vistas ##
+
+ ## Vista: VentasPorProducto
+
+**Descripción**:  
+Esta vista muestra el total de productos vendidos agrupados por el nombre del producto.
+
+### Columnas:
+- `nombre_producto`: Nombre del producto.
+- `total_vendido`: Cantidad total de unidades vendidas de ese producto.
+
+---
+
+## Vista: ClientesFrecuentes
+
+**Descripción**:  
+Esta vista muestra los clientes frecuentes, ordenados por la cantidad total de compras que han realizado.
+
+### Columnas:
+- `NombreCliente`: Nombre del cliente.
+- `ApellidoCliente`: Apellido del cliente.
+- `total_compras`: Cantidad total de compras realizadas por el cliente.
+
+ ## Funciones ##
+
+### Función: check_stock
+
+**Descripción**:  
+Esta función verifica si hay stock disponible de un producto específico basándose en el nombre, talla y color del producto. Devuelve un valor booleano (`TRUE` o `FALSE`) dependiendo de si hay stock o no.
+
+#### Parámetros:
+- `nombre_producto`: El nombre del producto (tipo `VARCHAR(50)`).
+- `talle_producto`: El talle del producto (tipo `VARCHAR(5)`).
+- `color_producto`: El color del producto (tipo `VARCHAR(20)`).
+
+#### Retorno:
+- **BOOLEAN**:  
+  - `TRUE`: Si hay stock disponible.
+  - `FALSE`: Si no hay stock disponible.
+
+---
+
+### Función: talle_mas_vendido
+
+**Descripción**:  
+Esta función devuelve el talle más vendido de un producto específico, basado en las ventas de todas sus variantes (tallas) registradas en la base de datos.
+
+#### Parámetros:
+- `nombre_producto`: El nombre del producto (tipo `VARCHAR(50)`).
+
+#### Retorno:
+- **VARCHAR(5)**:  
+  El talle más vendido del producto especificado.
+
+ 
+
