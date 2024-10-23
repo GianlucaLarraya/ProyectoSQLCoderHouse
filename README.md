@@ -4,6 +4,15 @@
 * Tutor: Nancy Elizabeth Villena Reines
 * Docente: Anderson Ocaña
 
+## Introducción ##
+Este proyecto consiste en el diseño y desarrollo de una base de datos para un showroom de prendas de ropa. La base de datos permite administrar de manera eficiente el inventario de productos, las ventas realizadas, las citas de los clientes para visitar el showroom, y las consultas de productos realizadas por clientes en redes sociales. A través de esta implementación, se busca obtener información valiosa que ayude a mejorar las operaciones y a tomar decisiones estratégicas basadas en datos reales.
+
+## Objetivo ##
+Optimizar la gestión de los recursos del negocio.
+
+## Situación Problemática ##
+La gestión del showroom se complica debido a la falta de un sistema centralizado que controle el inventario y las demás variables. Esto genera ineficiencias, como las dudas sobre la disponibilidad de ciertos productos o la poca precisión de la información sobre aspectos tan importantes como la facturación. La ausencia de información consolidada limita la toma de decisiones estratégicas y afecta la experiencia del cliente. 
+
 ## Temática del proyecto ##
 Este proyecto busca mediante una base de datos mejorar la gestion de un showroom de prendas de ropa ¿De qué manera? Llevando un registro del stock de los productos, las ventas, citas (ya que es un showroom con cita previa) y clientes. Además, con el objetivo de recolectar datos verdaderamente útiles para el desarrollo del negocio también se guardaran datos de las consultas hechas por clientes vía redes sociales sobre la disponibilidad de los productos. 
 
