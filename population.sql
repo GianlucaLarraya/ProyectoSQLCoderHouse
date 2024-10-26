@@ -177,3 +177,96 @@ INSERT INTO VARIANTEPRODUCTO(id_variante_producto, id_producto, talle_producto, 
 (31, 12, 'L', 'Verde', 'H');
 
 
+INSERT INTO CLIENTE(dni_cliente, nombre_cliente, apellido_cliente, edad_cliente) VALUES
+(33442211, 'Javier', 'Rodriguez', 38),
+(22113344, 'Sofia', 'Núñez', 24),
+(55667799, 'Laura', 'Blanco', 31),
+(99886677, 'Alberto', 'Castro', 48),
+(12344321, 'Natalia', 'Molina', 29),
+(87665432, 'Miguel', 'Ortega', 33);
+
+INSERT INTO COMPRA(monto_compra, fecha_compra, dni_cliente) VALUES
+(85.00, '2024-09-05 11:00:00', 33442211),
+(200.75, '2024-09-06 16:30:00', 22113344),
+(49.90, '2024-09-07 14:20:00', 55667799),
+(99.50, '2024-09-08 18:45:00', 99886677),
+(60.00, '2024-09-09 12:10:00', 12344321),
+(150.00, '2024-09-10 09:00:00', 87665432);
+
+INSERT INTO CONSULTA(id_producto_consulta, fecha_consulta) VALUES
+(2, '2024-09-01 15:10:00'),
+(3, '2024-09-02 16:30:00'),
+(8, '2024-09-03 10:00:00'),
+(5, '2024-09-04 12:15:00'),
+(10, '2024-09-05 09:45:00'),
+(6, '2024-09-06 11:30:00');
+
+INSERT INTO PRODUCTO(nombre_producto, precio_producto) VALUES
+('Blazer Casual', 89.99),
+('Zapatos Deportivos', 69.50),
+('Chaleco de Piel', 55.75),
+('Falda Plisada', 39.99),
+('Camiseta Básica', 12.50),
+('Abrigo Largo', 150.20);
+
+INSERT INTO VARIANTEPRODUCTO(id_variante_producto, id_producto, talle_producto, color_producto, genero_producto) VALUES
+(32, 16, 'M', 'Negro', 'M'),
+(33, 17, 'L', 'Blanco', 'M'),
+(34, 18, 'U', 'Marrón', 'U'),
+(35, 19, 'S', 'Rojo', 'U'),
+(36, 20, 'M', 'Gris', 'U'),
+(37, 21, 'L', 'Azul', 'U');
+
+INSERT INTO STOCK(id_variante_producto, cantidad) VALUES
+(32, 25),
+(33, 30),
+(34, 15),
+(35, 20),
+(36, 40),
+(37, 10);
+
+INSERT INTO PRODUCTOCOMPRA(id_producto_compra, id_variante_producto, id_compra, cantidad_producto) VALUES
+(64, 32, 12, 1),
+(65, 33, 13, 2),
+(66, 34, 14, 1),
+(67, 35, 15, 1),
+(68, 36, 16, 3),
+(69, 37, 17, 2);
+
+INSERT INTO TURNO (dni_cliente, fecha_turno) VALUES
+(33442211, '2024-09-05 10:00:00'),
+(22113344, '2024-09-06 15:00:00'),
+(55667799, '2024-09-07 09:00:00'),
+(99886677, '2024-09-08 11:30:00'),
+(12344321, '2024-09-09 13:00:00'),
+(87665432, '2024-09-10 14:00:00');
+
+INSERT INTO COMPRA(monto_compra, fecha_compra, dni_cliente) VALUES
+(150.00, '2024-01-15 10:30:00', 12345678),
+(89.99, '2024-02-12 12:00:00', 87654321),
+(200.50, '2024-03-18 14:15:00', 11223344),
+(75.25, '2024-04-22 11:45:00', 55667788),
+(130.75, '2024-05-19 09:10:00', 99887766),
+(99.99, '2024-06-05 15:00:00', 22334455),
+(165.40, '2024-07-23 17:25:00', 33445566),
+(215.60, '2024-08-14 13:00:00', 44556677),
+(185.75, '2024-09-10 16:20:00', 66778899),
+(140.00, '2024-10-03 10:00:00', 77889900),
+(180.30, '2024-11-27 11:30:00', 33442211),
+(120.50, '2024-12-20 14:45:00', 22113344);
+
+INSERT INTO PRODUCTOCOMPRA(id_variante_producto, id_compra, cantidad_producto) VALUES
+(1, 18, 2), 
+(3, 19, 1),  
+(5, 20, 3),  
+(7, 21, 1),  
+(9, 22, 2),  
+(11, 23, 1), 
+(13, 24, 1), 
+(15, 25, 2), 
+(17, 26, 1), 
+(19, 27, 1), 
+(21, 28, 2), 
+(23, 29, 1); 
+
+
