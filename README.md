@@ -213,5 +213,14 @@ Este trigger se activa antes de insertar un registro en la tabla `Turno`. Su pro
 - **`fecha_turno`** en la tabla `Turno`: Verifica que no se repita para evitar solapamientos.
 
 
+## Informes generados sobre la base de datos con Tableau ##
+
+Estos gráficos brindan una visión completa del showroom, facilitando la identificación de patrones de demanda, la optimización del inventario y la personalización de estrategias de marketing para adaptarse a las preferencias de los clientes.
+
+![alt text](https://github.com/GianlucaLarraya/ProyectoSQLCoderHouse/blob/main/finaldiagram.png?raw=true)
+
+
+
+
  
 
