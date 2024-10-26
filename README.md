@@ -219,19 +219,19 @@ Estos gráficos brindan una visión completa del showroom, facilitando la identi
 
 ### Gráfico 1: Facturación por género
 
-![alt text](https://github.com/GianlucaLarraya/ProyectoSQLCoderHouse/blob/main/facxgenero.png?raw=true)
+![alt text](https://github.com/GianlucaLarraya/ProyectoSQLCoderHouse/blob/main/GraphsTableau/facxgenero.png?raw=true)
 
 ### Gráfico 2: Facturación por mes
 
-![alt text](https://github.com/GianlucaLarraya/ProyectoSQLCoderHouse/blob/main/facxmes.png?raw=true)
+![alt text](https://github.com/GianlucaLarraya/ProyectoSQLCoderHouse/blob/main/GraphsTableau/facxmes.png?raw=true)
 
 ### Gráfico 3: Productos con mayor cantidad de consultas
 
-![alt text](https://github.com/GianlucaLarraya/ProyectoSQLCoderHouse/blob/main/grafconsultas.png?raw=true)
+![alt text](https://github.com/GianlucaLarraya/ProyectoSQLCoderHouse/blob/main/GraphsTableau/grafconsultas.png?raw=true)
 
 ### Gráfico 4: Proporción de inventario
 
-![alt text](https://github.com/GianlucaLarraya/ProyectoSQLCoderHouse/blob/main/propinventario.png?raw=true)
+![alt text](https://github.com/GianlucaLarraya/ProyectoSQLCoderHouse/blob/main/GraphsTableau/propinventario.png?raw=true)
 
 
 
